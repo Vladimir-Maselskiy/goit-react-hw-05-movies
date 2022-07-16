@@ -14,7 +14,7 @@ export const App = () => {
     >
       React homework template
       <Routes>
-        <Route path="/" element={<div>Route1</div>} />
+        <Route path="goit-react-hw-05-movies/" element={<div>Route1</div>} />
         <Route path="/" element={<div>Route2</div>} />
         {/* <Route path="/about" element={<Movies />} /> */}
       </Routes>
