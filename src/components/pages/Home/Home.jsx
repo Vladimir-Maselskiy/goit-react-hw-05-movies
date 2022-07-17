@@ -11,6 +11,7 @@ export default function Home() {
       .then(res => res.json())
       .then(data => setMovies(data.results));
   }, []);
+
   return (
     <div>
       <h3>Trening today</h3>

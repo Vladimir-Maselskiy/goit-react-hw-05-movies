@@ -18,8 +18,6 @@ export default function Reviews() {
         if (data.results.length > 0) {
           setIsReviewsLoading(true);
         }
-
-        console.log(data);
       });
   }, [movieID]);
 
