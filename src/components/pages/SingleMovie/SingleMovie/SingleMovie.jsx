@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate, Outlet } from 'react-router-dom';
 import * as API from 'utils/fetchThemoviedb';
-import MovieCard from './MovieCard/MovieCard';
+import MovieCard from '../MovieCard/MovieCard';
 import { StyledMovie, Button } from './SingleMovie.styled';
 
 export default function SingleMovie() {

@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Container } from './App.styled';
 import Nav from '../Nav/Nav';
 import Home from 'components/pages/Home/Home';
-import SingleMovie from 'components/pages/SingleMovie/SingleMovie';
+import SingleMovie from 'components/pages/SingleMovie/SingleMovie/SingleMovie';
 import Cast from 'components/pages/SingleMovie/Cast/Cast';
 import Reviews from 'components/pages/SingleMovie/Reviews/Reviews';
 import Movies from 'components/pages/Movies/Movies';
