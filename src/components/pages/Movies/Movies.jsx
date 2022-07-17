@@ -1,11 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import {
-  Link,
-  useLocation,
-  useNavigate,
-  useSearchParams,
-} from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import { StyledNavLink, StyledForm } from './Movies.styled';
 
 export default function Movies() {
   const [movies, setMovies] = useState([]);
@@ -33,17 +29,20 @@ export default function Movies() {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <StyledForm onSubmit={onSubmit}>
         <input name="query" />
         <button type="submit">Search</button>
-      </form>
+      </StyledForm>
       <ul>
         {query &&
           movies.map(movie => (
             <li key={movie.id}>
-              <Link to={`/movie/${movie.id}`} state={{ from: location }}>
+              <StyledNavLink
+                to={`/goit-react-hw-05-movies/movies/${movie.id}`}
+                state={{ from: location }}
+              >
                 {movie.title || movie.original_name}
-              </Link>{' '}
+              </StyledNavLink>{' '}
             </li>
           ))}
       </ul>

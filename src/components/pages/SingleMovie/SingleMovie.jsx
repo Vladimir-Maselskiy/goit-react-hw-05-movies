@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate, Outlet } from 'react-router-dom';
 import MovieCard from './MovieCard/MovieCard';
+import { StyledMovie, Button } from './SingleMovie.styled';
 
 export default function SingleMovie() {
   const [movie, setMovie] = useState(null);
@@ -28,10 +29,10 @@ export default function SingleMovie() {
   };
 
   return (
-    <div>
-      <button onClick={onClick}>Go Back</button>
+    <StyledMovie>
+      <Button onClick={onClick}>Go Back</Button>
       {movie && <MovieCard movie={movie} />}
       <Outlet />
-    </div>
+    </StyledMovie>
   );
 }

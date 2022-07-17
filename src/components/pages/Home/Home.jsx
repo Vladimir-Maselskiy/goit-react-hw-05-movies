@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { StyledNavLink } from './Home.styled';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -18,9 +19,12 @@ export default function Home() {
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>
-            <Link to={`/movie/${movie.id}`} state={{ from: location }}>
+            <StyledNavLink
+              to={`/goit-react-hw-05-movies/movies/${movie.id}`}
+              state={{ from: location }}
+            >
               {movie.title || movie.original_name}
-            </Link>{' '}
+            </StyledNavLink>{' '}
           </li>
         ))}
       </ul>

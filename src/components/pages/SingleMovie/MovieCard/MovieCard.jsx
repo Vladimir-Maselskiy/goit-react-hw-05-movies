@@ -1,5 +1,9 @@
-import { NavLink } from 'react-router-dom';
-import { ImageBox, StyledImg, AditionalBox } from './MovieCard.styled';
+import {
+  ImageBox,
+  StyledImg,
+  AditionalBox,
+  StyledNavLink,
+} from './MovieCard.styled';
 export default function MovieCard(props) {
   const {
     movie: {
@@ -32,8 +36,12 @@ export default function MovieCard(props) {
       </ImageBox>
       <AditionalBox>
         <h3>Aditional information</h3>
-        <NavLink to={`/movie/${id}/cast`}>Cast</NavLink>
-        <NavLink to={`/movie/${id}/reviews`}>Reviews</NavLink>
+        <StyledNavLink to={`/goit-react-hw-05-movies/movies/${id}/cast`}>
+          Cast
+        </StyledNavLink>
+        <StyledNavLink to={`/goit-react-hw-05-movies/movies/${id}/reviews`}>
+          Reviews
+        </StyledNavLink>
       </AditionalBox>
     </div>
   );

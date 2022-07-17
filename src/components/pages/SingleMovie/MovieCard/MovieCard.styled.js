@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledImg = styled.img`
@@ -13,4 +14,10 @@ export const AditionalBox = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid #ccc;
+`;
+export const StyledNavLink = styled(NavLink)`
+  &:visited,
+  &:link {
+    color: blue;
+  }
 `;
