@@ -1,9 +1,11 @@
+import PropTypes from 'prop-types';
 import {
   ImageBox,
   StyledImg,
   AditionalBox,
   StyledNavLink,
 } from './MovieCard.styled';
+
 export default function MovieCard(props) {
   const {
     movie: {
@@ -46,3 +48,19 @@ export default function MovieCard(props) {
     </div>
   );
 }
+
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    poster_path: PropTypes.string,
+    original_title: PropTypes.string,
+    vote_average: PropTypes.number,
+    overview: PropTypes.string,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+      })
+    ),
+    id: PropTypes.number,
+  }).isRequired,
+};

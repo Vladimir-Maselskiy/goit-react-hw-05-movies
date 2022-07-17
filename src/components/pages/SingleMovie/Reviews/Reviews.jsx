@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import * as API from 'utils/fetchThemoviedb';
 // import { StyledList, StyledListItem, StyledIMG } from './Cast.styled';
 
 export default function Reviews() {
@@ -9,16 +10,12 @@ export default function Reviews() {
   const { movieID } = useParams();
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${movieID}/reviews?api_key=834c76b3089fde7a8eb63b29983db356&page=1`
-    )
-      .then(res => res.json())
-      .then(data => {
-        setReviews(data.results);
-        if (data.results.length > 0) {
-          setIsReviewsLoading(true);
-        }
-      });
+    API.fetchReviews(movieID).then(data => {
+      setReviews(data.results);
+      if (data.results.length > 0) {
+        setIsReviewsLoading(true);
+      }
+    });
   }, [movieID]);
 
   return (

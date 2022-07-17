@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import * as API from 'utils/fetchThemoviedb';
 import { StyledNavLink, StyledForm } from './Movies.styled';
 
 export default function Movies() {
@@ -11,13 +12,7 @@ export default function Movies() {
   const query = searchParams.get('query');
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=834c76b3089fde7a8eb63b29983db356&query=${query}`
-    )
-      .then(res => res.json())
-      .then(data => {
-        setMovies(data.results);
-      });
+    API.fetchMoviesByQuery(query).then(data => setMovies(data.results));
   }, [query, navigate]);
 
   const onSubmit = e => {

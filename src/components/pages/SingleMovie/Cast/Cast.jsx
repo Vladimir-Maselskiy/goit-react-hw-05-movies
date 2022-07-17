@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import * as API from 'utils/fetchThemoviedb';
 import { StyledList, StyledListItem, StyledIMG } from './Cast.styled';
 
 export default function Cast() {
@@ -8,13 +9,9 @@ export default function Cast() {
   const { movieID } = useParams();
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${movieID}/credits?api_key=834c76b3089fde7a8eb63b29983db356&page=1`
-    )
-      .then(res => res.json())
-      .then(data => {
-        setCast(data.cast.slice(0, 5));
-      });
+    API.fetchCast(movieID).then(data => {
+      setCast(data.cast.slice(0, 5));
+    });
   }, [movieID]);
 
   return (
