@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate, Outlet } from 'react-router-dom';
 import * as API from 'utils/fetchThemoviedb';
 import MovieCard from '../MovieCard/MovieCard';
-import { StyledMovie, Button } from './SingleMovie.styled';
+import { StyledMovie, Button } from './MovieDetails.styled';
 
-export default function SingleMovie() {
+export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
   const { movieID } = useParams();
   const navigate = useNavigate();

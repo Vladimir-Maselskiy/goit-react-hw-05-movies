@@ -2,12 +2,12 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { Container } from './App.styled';
 import Nav from '../Nav/Nav';
-import Cast from 'components/pages/SingleMovie/Cast/Cast';
-import Reviews from 'components/pages/SingleMovie/Reviews/Reviews';
+import Cast from 'components/pages/MovieDetails/Cast/Cast';
+import Reviews from 'components/pages/MovieDetails/Reviews/Reviews';
 const Home = lazy(() => import('components/pages/Home/Home'));
 const Movies = lazy(() => import('components/pages/Movies/Movies'));
-const SingleMovie = lazy(() =>
-  import('components/pages/SingleMovie/SingleMovie/SingleMovie')
+const MovieDetails = lazy(() =>
+  import('components/pages/MovieDetails/MovieDetails/MovieDetails')
 );
 
 export const App = () => {
@@ -20,7 +20,7 @@ export const App = () => {
           <Route path="/goit-react-hw-05-movies/movies" element={<Movies />} />
           <Route
             path="/goit-react-hw-05-movies/movies/:movieID"
-            element={<SingleMovie />}
+            element={<MovieDetails />}
           >
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
