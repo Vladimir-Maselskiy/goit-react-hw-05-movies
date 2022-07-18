@@ -12,7 +12,9 @@ export default function Movies() {
   const query = searchParams.get('query');
 
   useEffect(() => {
-    API.fetchMoviesByQuery(query).then(data => setMovies(data.results));
+    if (query) {
+      API.fetchMoviesByQuery(query).then(data => setMovies(data.results));
+    }
   }, [query, navigate]);
 
   const onSubmit = e => {
