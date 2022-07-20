@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.20f81448.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.dac94301.js",
     "static/js/304.5cbee675.chunk.js": "/goit-react-hw-05-movies/static/js/304.5cbee675.chunk.js",
     "static/js/310.4268a075.chunk.js": "/goit-react-hw-05-movies/static/js/310.4268a075.chunk.js",
-    "static/js/207.2b1311bc.chunk.js": "/goit-react-hw-05-movies/static/js/207.2b1311bc.chunk.js",
+    "static/js/207.e67ad7b0.chunk.js": "/goit-react-hw-05-movies/static/js/207.e67ad7b0.chunk.js",
     "static/js/269.3644dcca.chunk.js": "/goit-react-hw-05-movies/static/js/269.3644dcca.chunk.js",
     "static/js/811.9f739c8c.chunk.js": "/goit-react-hw-05-movies/static/js/811.9f739c8c.chunk.js",
     "static/js/105.56eaffcb.chunk.js": "/goit-react-hw-05-movies/static/js/105.56eaffcb.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.20f81448.js.map": "/goit-react-hw-05-movies/static/js/main.20f81448.js.map",
+    "main.dac94301.js.map": "/goit-react-hw-05-movies/static/js/main.dac94301.js.map",
     "304.5cbee675.chunk.js.map": "/goit-react-hw-05-movies/static/js/304.5cbee675.chunk.js.map",
     "310.4268a075.chunk.js.map": "/goit-react-hw-05-movies/static/js/310.4268a075.chunk.js.map",
-    "207.2b1311bc.chunk.js.map": "/goit-react-hw-05-movies/static/js/207.2b1311bc.chunk.js.map",
+    "207.e67ad7b0.chunk.js.map": "/goit-react-hw-05-movies/static/js/207.e67ad7b0.chunk.js.map",
     "269.3644dcca.chunk.js.map": "/goit-react-hw-05-movies/static/js/269.3644dcca.chunk.js.map",
     "811.9f739c8c.chunk.js.map": "/goit-react-hw-05-movies/static/js/811.9f739c8c.chunk.js.map",
     "105.56eaffcb.chunk.js.map": "/goit-react-hw-05-movies/static/js/105.56eaffcb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.20f81448.js"
+    "static/js/main.dac94301.js"
   ]
 }
