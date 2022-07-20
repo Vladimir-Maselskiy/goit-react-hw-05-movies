@@ -26,6 +26,7 @@ export default function MovieDetails() {
   const onClick = () => {
     if (!savedLocation) {
       navigate('/');
+      return;
     }
     navigate(savedLocation);
   };
