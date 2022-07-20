@@ -10,12 +10,14 @@ export default function Reviews() {
   const { movieID } = useParams();
 
   useEffect(() => {
-    API.fetchReviews(movieID).then(data => {
-      setReviews(data.results);
-      if (data.results.length > 0) {
-        setIsReviewsLoading(true);
-      }
-    });
+    API.fetchReviews(movieID)
+      .then(data => {
+        setReviews(data.results);
+        if (data.results.length > 0) {
+          setIsReviewsLoading(true);
+        }
+      })
+      .catch(err => console.log(err));
   }, [movieID]);
 
   return (

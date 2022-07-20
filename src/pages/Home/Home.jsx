@@ -8,7 +8,9 @@ export default function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    API.fetchDayPopularMovies().then(data => setMovies(data.results));
+    API.fetchDayPopularMovies()
+      .then(data => setMovies(data.results))
+      .catch(err => console.log(err));
   }, []);
 
   return (
@@ -18,7 +20,7 @@ export default function Home() {
         {movies.map(movie => (
           <li key={movie.id}>
             <StyledNavLink
-              to={`/goit-react-hw-05-movies/movies/${movie.id}`}
+              to={`/movies/${movie.id}`}
               state={{ from: location }}
             >
               {movie.title || movie.original_name}

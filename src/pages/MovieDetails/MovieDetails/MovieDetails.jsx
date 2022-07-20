@@ -12,7 +12,9 @@ export default function MovieDetails() {
   const [savedLocation, setSavedLocation] = useState(null);
 
   useEffect(() => {
-    API.fetchMovieByID(movieID).then(setMovie);
+    API.fetchMovieByID(movieID)
+      .then(setMovie)
+      .catch(err => console.log(err));
   }, [movieID]);
 
   useEffect(() => {
@@ -22,6 +24,9 @@ export default function MovieDetails() {
   }, [location]);
 
   const onClick = () => {
+    if (!savedLocation) {
+      navigate('/');
+    }
     navigate(savedLocation);
   };
 

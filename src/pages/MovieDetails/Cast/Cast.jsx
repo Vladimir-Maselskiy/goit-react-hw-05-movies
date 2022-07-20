@@ -9,9 +9,11 @@ export default function Cast() {
   const { movieID } = useParams();
 
   useEffect(() => {
-    API.fetchCast(movieID).then(data => {
-      setCast(data.cast.slice(0, 5));
-    });
+    API.fetchCast(movieID)
+      .then(data => {
+        setCast(data.cast.slice(0, 5));
+      })
+      .catch(err => console.log(err));
   }, [movieID]);
 
   return (

@@ -38,12 +38,8 @@ export default function MovieCard(props) {
       </ImageBox>
       <AditionalBox>
         <h3>Aditional information</h3>
-        <StyledNavLink to={`/goit-react-hw-05-movies/movies/${id}/cast`}>
-          Cast
-        </StyledNavLink>
-        <StyledNavLink to={`/goit-react-hw-05-movies/movies/${id}/reviews`}>
-          Reviews
-        </StyledNavLink>
+        <StyledNavLink to={`/movies/${id}/cast`}>Cast</StyledNavLink>
+        <StyledNavLink to={`/movies/${id}/reviews`}>Reviews</StyledNavLink>
       </AditionalBox>
     </div>
   );

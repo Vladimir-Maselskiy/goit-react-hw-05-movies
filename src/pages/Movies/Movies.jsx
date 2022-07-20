@@ -13,7 +13,9 @@ export default function Movies() {
 
   useEffect(() => {
     if (query) {
-      API.fetchMoviesByQuery(query).then(data => setMovies(data.results));
+      API.fetchMoviesByQuery(query)
+        .then(data => setMovies(data.results))
+        .catch(err => console.log(err));
     }
   }, [query, navigate]);
 
@@ -35,7 +37,7 @@ export default function Movies() {
           movies.map(movie => (
             <li key={movie.id}>
               <StyledNavLink
-                to={`/goit-react-hw-05-movies/movies/${movie.id}`}
+                to={`/movies/${movie.id}`}
                 state={{ from: location }}
               >
                 {movie.title || movie.original_name}
