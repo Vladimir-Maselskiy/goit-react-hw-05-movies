@@ -14,8 +14,11 @@ export default function MovieDetails() {
   useEffect(() => {
     API.fetchMovieByID(movieID)
       .then(setMovie)
-      .catch(err => console.log(err));
-  }, [movieID]);
+      .catch(err => {
+        navigate('/');
+        console.log(err);
+      });
+  }, [movieID, navigate]);
 
   useEffect(() => {
     if (location.state) {
